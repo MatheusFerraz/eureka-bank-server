@@ -40,6 +40,10 @@ apenas uma demonstração de exibição do funcionamento dos métodos de fallbac
 quando o circuito se encontra aberto ou quando a chamada a algum outro método falha. É válido ressaltar que após um intervalo,
 que pode ser parametrizado, o Hystrix pode fechar o circuito para que as requisições voltem a ser encaminhadas para o fluxo normal.
 
+Outro aspecto que é importante considerar é que a utilização do Zuul Gateway pode ser viável a fim de se unificar as chamadas,
+visto que o mesmo permite um caminho único para os microsserviços, facilitando até mesmo autenticação e configuração de rate limits de maneira
+centralizada.
+
 Com relação aos testes unitários, embora nem todos os microsserviços possuam implementações, é válido notar que pode
 ser utilizado o Mockito para contrução de mocks, assertivas do Junit e o JsonPath para testar conteúdo de retorno dos
 endpoints.
